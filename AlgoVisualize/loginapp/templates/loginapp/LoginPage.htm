@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Log In</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% load static %}
+		<link rel="stylesheet"  href = "{% static 'loginapp/LoginPagestyling.css' %}">
+		
+	</head>
+
+	<body>
+		
+		<div class="sidenav">
+			<div class = "main-text">
+				<h2>Algorithm Visualizer<br></h2>
+				<h2>Login Page</h2>	
+				<p>Welcome to Algorithm Visualizer<br>Login or Register to access</p>
+			</div>
+		</div>
+		<div class="main">
+			<div class = "col-md-6 col-sm-12">
+				{% if messages %}
+					{% for message in messages %}
+					<div class = "alert alert-{{ message.tags }} success_message">
+						{{ message }}
+					</div>
+					{% endfor %}
+				{% endif %}
+				{% load crispy_forms_tags %}
+                <div class="login-form" style = "margin-top: 50%;">
+                    <form method = "POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            <legend class = "border-top mb-4">Login</legend>
+                            {{ form|crispy }}
+                        </fieldset>
+                        <div class="Button">
+                            <button type ="submit" class = "btn btn-black">Login</button>
+                            <a class = "btn btn-secondary" href = "{% url 'register' %}">Register</a>    
+                        </div>    
+                    </form>
+                </div>
+			</div>
+		</div>
+		
+
+	</body>
+		
+</html>

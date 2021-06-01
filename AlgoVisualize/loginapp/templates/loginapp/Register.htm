@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% load static %}
+		<link rel="stylesheet" type = "text/css" href = "{% static 'loginapp/RegisterPagestyling.css' %}">
+    </head>
+
+    <body>
+        <div class="sidenav">
+			<div class = "main-text">
+				<h2>Algorithm Visualizer<br></h2>
+				<h2>Login Page</h2>	
+				<p>Welcome to Algorithm Visualizer<br> Login or Register to access</p>
+			</div>
+		</div>
+        <div class="main">
+            <div class="col-md-6 col-sm-12">
+                {% load crispy_forms_tags %}
+                <div class="register-form">
+                    <form method = "POST">
+                        {% csrf_token %}
+                        <fieldset class="form-group">
+                            <legend class = "border-top mb-4">Welcome</legend>
+                            {{ registerform|crispy }}
+                        </fieldset>
+                        <div class="Button">
+                            <button type ="submit" class = "btn btn-black">Register</button>
+                            <button type ="button" class = "btn btn-secondary" onclick="location.href = '/'">Cancel</button>    
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
