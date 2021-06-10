@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoVisualize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+        
+        .card{
+            
+            min-width: 300px;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+
+
+        <a class="navbar-brand" href="{% url 'algo-home' %}">Algo Visualizer</a>
+        <div class="navbar-nav mr-auto">
+            <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
+        </div>
+        <div class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="{%  url 'profile' %}">Profile</a></li>
+            <li class="nav-item"><a class="nav-link " href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li class="nav-item"><a class="nav-link" href="login/">Login</a></li>
+            {% endif %}
+        </div>
+    </nav>
+        {% block content %} {% endblock %}
+    </body>
+</html>

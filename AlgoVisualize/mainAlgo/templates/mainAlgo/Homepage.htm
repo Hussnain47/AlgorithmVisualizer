@@ -1,33 +1,62 @@
-<!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>AlgoVisualize</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+{% extends "mainAlgo/base.htm" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href = "{% static 'mainAlgo/Homepage.css' %}">
+
+<div class="container-fluid align-top" style="margin-top: 100px;" id="Main-Page">
+
+    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style = "max-width: 300px;">
         
-    </head>
-    
-    <body>
-        <nav class="navbar navbar-inverse">
-            <div class = "container-fluid">
-                <div class="nav navbar-header">
-                    <div class="navbar-brand" href = "/">Algo Visualizer</div>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                    {% if user.is_authenticated %}
-                    <li><a href = "{%  url 'profile' %}"><span class = "glyphicon glyphicon-log-out"></span> Profile</a></li>
-                    <li><a href = "logout/"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>
-                    {% else %}
-                    <li><a href = "login/"><span class = "glyphicon glyphicon-log-in"></span> Login</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-        <div class = 'container'>
-            <h3>HOME PAGE</h3>
+        <div class="card-body">
+            <h4 class="card-title">Sorting</h4>
+            
         </div>
-    </body>
-</html>
+        <div class="card-footer">
+            <a class="card-link  btn btn-dark" href = "#" >Bubble Sort</a>
+            <a class="card-link  btn btn-dark" href = "{% url 'insertion-sort' %}" >Insertion Sort</a>
+            <a class="card-link  btn btn-dark ml-auto" href = "#" >Merge Sort</a>
+            <a class="card-link  btn btn-dark ml-md-4" href = "#" >Quick Sort</a>
+        </div>
+    </div>
+
+    <div class="card text-white bg-dark mb-3 d-inline-block align-top" >
+        
+        <div class="card-body">
+            <h4 class="card-title">Linked List</h4>
+            <p class="card-text">Enter,Remove,Search</p>
+        </div>
+        <div class="card-footer text-center">
+            
+            <a class="card-link btn btn-dark" href = "#" >Go</a>
+            
+        </div>
+    </div>
+
+    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style = "min-width: 300px;">
+        
+        <div class="card-body">
+            <h4 class="card-title">Stack</h4>
+            <p class="card-text">Push,Pop,Search</p>
+        </div>
+        <div class="card-footer text-center">
+            
+            <a class="card-link btn btn-dark" href = "#" >Go</a>
+            
+        </div>
+    </div>
+
+    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style = "min-width: 300px;">
+        
+        <div class="card-body">
+            <h4 class="card-title">Queue</h4>
+            <p class="card-text">EnQueue,Dequeue,Search</p>
+        </div>
+        <div class="card-footer text-center">
+            
+            <a class="card-link btn btn-dark" href = "#" >Go</a>
+            
+        </div>
+    </div>
+
+</div>
+{% endblock %}

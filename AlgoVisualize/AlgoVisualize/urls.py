@@ -16,15 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
-from django.contrib.auth import views as auth_views
-from loginapp import views as user_views
-from mainAlgo import views as main_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_views.homepage, name = 'algo-home'),
-    path('login/', auth_views.LoginView.as_view(template_name='loginapp/LoginPage.htm'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='loginapp/LogoutPage.htm'), name='logout'),
-    path('register/', user_views.register, name = 'register'),
-    path('profile/', user_views.profile, name = 'profile'), 
+    path('', include('loginapp.urls')),
+    path('', include('mainAlgo.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

@@ -1,32 +1,34 @@
-<!DOCTYPE html>
-<html>
-    
-    <head>
-        <title>AlgoVisualize</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
-    </head>
-    
-    <body>
-        <nav class="navbar navbar-inverse">
-            <div class = "container-fluid">
-                <div class="nav navbar-header">
-                    <div class="navbar-brand" href = "/">Algo Visualizer</div>
-                </div>
-                <ul class="nav navbar-nav navbar-right">
-                    {% if user.is_authenticated %}
-                    <li><a href = 'logout/'><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>
-                    {% else %}
-                    <li><a href = 'login/'><span class = "glyphicon glyphicon-log-in"></span> Login</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-        <div class = 'container'>
-            <h1>{{ user.username }}</h1>
+
+{% extends "loginapp/base.htm" %}
+{% block content %}
+{% load crispy_forms_tags %}
+    <div class='container'>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} success_message">
+            {{ message }}
         </div>
-    </body>
-</html>
+        {% endfor %}
+        {% endif %}
+        <div class="content-section">
+            <div class="media">
+                <img class="avatar img-circle" width="100px" height="100px" src="{{ user.profile.image.url }}">
+                <div class="media-body">
+                    <h2 class="media-heading">{{ user.username }}</h2>
+                    <p class="text-secondary">{{ user.email }}</p>
+                </div>
+            </div>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-top mb-4">Profile Info</legend>
+                    {{ u_form|crispy }}
+                    {{ p_form|crispy }}
+                </fieldset>
+                <div class="Button">
+                    <button type="submit" class="btn btn-black">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
