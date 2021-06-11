@@ -3,28 +3,28 @@
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 400px;
-    left: 400px;
+    top: 40%;
 }
 
-#btn{
+#btn {
     position: absolute;
     bottom: 5%;
     right: 5%;
 }
-#input-container{
+
+#input-container {
     position: absolute;
     bottom: 1.6%;
     left: 2%;
 }
 
-#reset{
+#reset {
     position: absolute;
     bottom: 5%;
     right: 10%;
 }
 
-#generate-random{
+#generate-random {
     position: absolute;
     bottom: 8%;
     left: 25%;
