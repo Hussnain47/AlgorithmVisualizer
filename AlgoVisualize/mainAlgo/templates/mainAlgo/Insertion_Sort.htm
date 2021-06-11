@@ -5,7 +5,17 @@
 
 
 <div>
-    <button id='btn' style="margin-top: 10px;"> Move</button>
+    <div id = "input-container">
+        <div class = "form-outline">
+            <input id = "list" type="text" class="form-control" placeholder="Enter Array Here:"> 
+        </div>
+        <small class = "text-muted">Enter Numbers Separated by commas.<br>Max Length is 20.</small>
+    </div>
+    <button id='generate-random' class = "btn btn-secondary" >Generate Randomly</button>
+
+
+    <button id='btn' class = "btn btn-secondary" > Start</button>
+    <button id='reset' class = "btn btn-secondary"> Reset</button>
     <script src="{% static 'mainAlgo/Insertion_Sort.js' %}">
     </script>
 </div>
