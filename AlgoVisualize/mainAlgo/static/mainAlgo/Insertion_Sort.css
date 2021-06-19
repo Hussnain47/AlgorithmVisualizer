@@ -6,7 +6,7 @@
     top: 40%;
 }
 
-#btn {
+#start {
     position: absolute;
     bottom: 5%;
     right: 5%;
@@ -18,6 +18,8 @@
     left: 2%;
 }
 
+
+
 #reset {
     position: absolute;
     bottom: 5%;
@@ -27,5 +29,11 @@
 #generate-random {
     position: absolute;
     bottom: 8%;
-    left: 25%;
+    left: 30%;
+}
+
+#make-list{
+    position: absolute;
+    bottom: 8%;
+    left: 20%;
 }
