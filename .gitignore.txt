@@ -1,1 +1,9 @@
 /AlgoVisualize/.vscode
+
+/site
+
+.mypy_cache/
+
+dmypy.json
+
+.pyre/
