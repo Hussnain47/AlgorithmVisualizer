@@ -37,3 +37,12 @@
     bottom: 8%;
     left: 20%;
 }
+
+#slidercontainer{
+    position: absolute;
+    bottom: 8%;
+    left: 45%;
+}
+#slider{
+    width: 200px;
+}

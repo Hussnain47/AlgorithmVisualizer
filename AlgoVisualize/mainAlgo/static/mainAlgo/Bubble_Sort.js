@@ -21,13 +21,23 @@ async function movetoporbottum(y_axis, done, n, speed, color) {
 
         $(document).ready(function () {
 
-            $("#test" + n).css("background-color", "lightgray")
+            $("#test" + n).css("background-color", "transparent")
             $("#test" + n).css("border-color", "red")
         });
     }
 }
-//Insertion Sort
-async function bubblesort(A, speed) {
+
+let speed;
+$(document).ready(function(){
+    $("[type=range]").change(function(){
+      speed=$(this).val();
+      console.log(speed);
+      $('#sliderval').text(speed);
+    });
+});
+
+//Bubble Sort
+async function bubblesort(A) {
     let i, temp, t, j, swapped;
     let len = A.length;
     console.log(len);
@@ -183,7 +193,7 @@ function disable_enablebtn(x) {
 
 async function start(A) {
     disable_enablebtn(true);
-    await bubblesort(A, 100);
+    await bubblesort(A);
     disable_enablebtn(false);
 }
 

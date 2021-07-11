@@ -21,13 +21,23 @@ async function movetoporbottum(y_axis, done, n, speed, color) {
 
         $(document).ready(function () {
 
-            $("#test" + n).css("background-color", "lightgray")
+            $("#test" + n).css("background-color", "transparent")
             $("#test" + n).css("border-color", "red")
         });
     }
 }
+
+let speed;
+$(document).ready(function(){
+    $("[type=range]").change(function(){
+      speed=$(this).val();
+      console.log(speed);
+      $('#sliderval').text(speed);
+    });
+});
+
 //Insertion Sort
-async function insertionsort(A, speed) {
+async function insertionsort(A) {
     let i, key, j
     let len = A.length;
     console.log(len);
@@ -169,7 +179,7 @@ function disable_enablebtn(x){
 
 async function start(A) {
     disable_enablebtn(true);
-    await insertionsort(A, 100);
+    await insertionsort(A);
     disable_enablebtn(false);
 }
 
