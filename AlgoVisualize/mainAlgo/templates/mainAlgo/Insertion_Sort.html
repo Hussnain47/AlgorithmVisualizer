@@ -18,9 +18,8 @@
         <label for = 'slider'>Time(<span id = 'sliderval'>250</span>ms)</label>
         <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
     </div>
-    
+    <a id='bigsort' class="btn btn-secondary" href = "{% url 'big-insertion-sort' %}"> Big Insertion Sort</a>
     <button id='start' class = "btn btn-secondary" > Start</button>
-    <button id='reset' class = "btn btn-secondary"> Reset</button>
     <script src="{% static 'mainAlgo/Insertion_Sort.js' %}">
     </script>
 </div>

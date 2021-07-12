@@ -6,4 +6,6 @@ urlpatterns = [
     path('', views.homepage,name = 'algo-home'),
     path('Insertion_sort/', views.insertionsort,name = 'insertion-sort'),
     path('Bubble_sort/', views.bubblesort,name = 'bubble-sort'),
+    path('BigIS/',views.bigIS,name= 'big-insertion-sort'),
+    path('Merge_Sort/',views.mergesort,name= 'merge-sort'),
 ]

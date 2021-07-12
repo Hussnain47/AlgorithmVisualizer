@@ -18,7 +18,11 @@
     left: 2%;
 }
 
-
+#bigsort{
+    position: absolute;
+    right: 20%;
+    bottom: 5%;
+}
 
 #reset {
     position: absolute;

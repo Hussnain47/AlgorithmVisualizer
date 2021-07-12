@@ -1,0 +1,22 @@
+{% extends "mainAlgo/base.htm" %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'mainAlgo/BigIS.css' %}">
+<title>Insertion Sort</title>
+
+<div>
+
+    <div id='rectdiv'>
+        <canvas id='Canvas'></canvas>
+    </div>
+
+    <button id='generate-random' class="btn btn-secondary">Generate Random</button>
+
+    <a id='smallsort' class="btn btn-secondary" href = "{% url 'insertion-sort' %}"> Small Insertion Sort</a>
+    <button id='start' class="btn btn-secondary"> Start</button>
+
+    <script src="{% static 'mainAlgo/BigIS.js' %}">
+    </script>
+</div>
+{% endblock %}
