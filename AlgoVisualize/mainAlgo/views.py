@@ -13,4 +13,7 @@ def bubblesort(request):
     return render(request,'mainAlgo/Bubble_Sort.html')     
 
 def mergesort(request):
-    return render(request, 'mainAlgo/MS.html')    
+    return render(request, 'mainAlgo/MS.html') 
+
+def linkedlist(request):
+    return render(request, 'mainAlgo/LinkedList.html')
