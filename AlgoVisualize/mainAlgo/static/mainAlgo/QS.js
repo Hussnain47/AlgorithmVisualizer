@@ -26,7 +26,7 @@ function canvelements(){
 
 }
 function drawbars(start,pivot,end){
-
+    console.log(Arr);
     canvele.clearRect(0,0,1000,1000);
 
     for(let i = 0; i < len ; i++){
@@ -90,7 +90,6 @@ async function quickSort(start,end){
     let pivot;
     if (Arr.length > 1){
         pivot = await partition(start,end);
-        console.log(pivot,start,end);
         if(start < pivot -1){
             await quickSort(start,pivot - 1)
         }
@@ -122,6 +121,7 @@ async function start(){
 }
 
 drawbars();
+
 $(document).ready(function () {
     $("#start").click(function () {
         start();

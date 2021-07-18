@@ -15,5 +15,8 @@ def bubblesort(request):
 def mergesort(request):
     return render(request, 'mainAlgo/MS.html') 
 
+def quicksort(request):
+    return render(request, 'mainAlgo/QS.html') 
+
 def linkedlist(request):
     return render(request, 'mainAlgo/LinkedList.html')
