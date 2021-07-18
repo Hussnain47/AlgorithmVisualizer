@@ -20,3 +20,9 @@ def quicksort(request):
 
 def linkedlist(request):
     return render(request, 'mainAlgo/LinkedList.html')
+
+def stack(request):
+    return render(request, 'mainAlgo/Stack.html')
+
+def queue(request):
+    return render(request, 'mainAlgo/Queue.html')        

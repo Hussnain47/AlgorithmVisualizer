@@ -1,0 +1,36 @@
+{% extends "mainAlgo/base.htm" %}
+{% block content %}
+{% load static %}
+    
+<link rel="stylesheet" href="{% static 'mainAlgo/Stack.css' %}">
+
+
+<div>
+    <div id = "Svg-Box">
+        <svg id='svg' width='100%' height='600px'>
+            <defs id='mardef'>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" />
+                </marker>
+            </defs>
+        </svg>
+    </div>
+    <div id='List-Operations ' class='d-inline-block'>
+        <div id="input-container">
+            <div class="input-group">
+                <input id="inputval" type="text" class="form-control" placeholder="Enter Value Here:">
+                
+            </div>
+
+            <small class="text-muted">Enter Numbers.Numbers must be less than 1000<br>Max
+                Length of List is 9.</small>
+        </div>
+        <div id='Buttons'>
+            <a id='insertatHead' class='btn btn-secondary text-white'>Insert</a>
+            <a id='deletefromHead' class='btn btn-secondary text-white'>Delete</a>
+        </div>
+    </div>
+    
+    <script src="{% static 'mainAlgo/Stack.js' %}"></script>
+</div>
+{% endblock %}
