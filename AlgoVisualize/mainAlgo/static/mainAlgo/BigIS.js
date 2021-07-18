@@ -1,7 +1,7 @@
 let len = 100;
 let canvas,canvasw,canvash,canvele;
 let rectgap = 10;
-let speed = 100;
+let speed = 250;
 
 
 let Arr = [], temp = [] , visited = [] ;
@@ -78,6 +78,19 @@ async function start(){
 }
 canvelements();
 drawbars();
+
+$(document).ready(function(){
+    $("[type=range]").change(function(){
+      speed=$(this).val();
+      console.log(speed);
+      $('#sliderval').text(speed);
+    });
+});
+
+$('#generate-random').click(function() {
+    location.reload();
+});
+
 $(document).ready(function () {
     $("#start").click(function () {
         start();
