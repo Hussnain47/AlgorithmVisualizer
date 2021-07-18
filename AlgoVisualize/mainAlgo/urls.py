@@ -8,4 +8,5 @@ urlpatterns = [
     path('Bubble_sort/', views.bubblesort,name = 'bubble-sort'),
     path('BigIS/',views.bigIS,name= 'big-insertion-sort'),
     path('Merge_Sort/',views.mergesort,name= 'merge-sort'),
+    path('Linked_List/',views.linkedlist,name= 'linked-list'),
 ]

@@ -1,0 +1,21 @@
+
+
+#List-Operations{
+    width: 100%
+}
+
+#input-container{
+    position: absolute;
+    width: 500px;
+    left:10%;
+}
+
+#index{
+    width: 50px;
+}
+
+#Buttons{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+}
