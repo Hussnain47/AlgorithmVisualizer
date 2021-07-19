@@ -1,1 +1,1 @@
-web: gunicorn AlgoVisualize.wsgi
+web: waitress-serve --port=$PORT AlgoVisualize.wsgi:application
