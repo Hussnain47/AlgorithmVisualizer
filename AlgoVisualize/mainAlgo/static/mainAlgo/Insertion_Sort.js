@@ -27,7 +27,7 @@ async function movetoporbottum(y_axis, done, n, speed, color) {
     }
 }
 
-let speed;
+let speed = 250;
 $(document).ready(function(){
     $("[type=range]").change(function(){
       speed=$(this).val();
@@ -35,6 +35,10 @@ $(document).ready(function(){
       $('#sliderval').text(speed);
     });
 });
+
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 //Insertion Sort
 async function insertionsort(A) {
@@ -48,40 +52,20 @@ async function insertionsort(A) {
         while (j >= 0 && key < A[j]) {
 
 
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                    resolve();
-                }, speed * 3)
-            );
+            await timeout(speed*3)
             moverightorleft(-50, key, speed, "blue");
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                    resolve();
-                }, speed * 3)
-            );
+            await timeout(speed*3)
             movetoporbottum(-50, false, A[j], speed, "red");
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                    resolve();
-                }, speed * 3)
-            );
+            await timeout(speed*3)
             moverightorleft(50, A[j], speed, "red");
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                    resolve();
-                }, speed * 3)
-            );
+            await timeout(speed*3)
             movetoporbottum(50, true, A[j], speed, "red");
             console.log(i);
             A[j + 1] = A[j];
             j--;
 
         }
-        await new Promise((resolve) =>
-            setTimeout(() => {
-                resolve();
-            }, speed * 3)
-        );
+        await timeout(speed*3)
         movetoporbottum(-50, true, key, speed, "blue");
 
         A[j + 1] = key;
@@ -172,7 +156,6 @@ $(document).ready(function () {
 
 function disable_enablebtn(x){
     $("#start").attr("disabled",x);
-    $("#reset").attr("disabled",x);
     $("#generate-random").attr("disabled",x);
     $("#make-list").attr("disabled",x);
 }

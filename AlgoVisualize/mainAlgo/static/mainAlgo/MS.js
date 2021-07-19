@@ -108,8 +108,10 @@ async function mergeSort(start,end){
 }
 
 async function start(){
+    disable_enablebtn(true);
     await mergeSort(0, len-1);
     await drawbars();
+    disable_enablebtn(false);
 }
 
 drawbars();
@@ -127,8 +129,14 @@ $('#generate-random').click(function() {
     location.reload();
 });
 
+function disable_enablebtn(x){
+    $("#start").attr("disabled",x);
+    $("#generate-random").attr("disabled",x);
+}
+
 $(document).ready(function () {
     $("#start").click(function () {
+        
         start();
     });
 });

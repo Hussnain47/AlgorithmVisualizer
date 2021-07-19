@@ -116,11 +116,18 @@ $('#generate-random').click(function() {
 });
 
 async function start(){
+    disable_enablebtn(true);
     await quickSort(0, len-1);
     await drawbars();
+    disable_enablebtn(false);
 }
 
 drawbars();
+
+function disable_enablebtn(x){
+    $("#start").attr("disabled",x);
+    $("#generate-random").attr("disabled",x);
+}
 
 $(document).ready(function () {
     $("#start").click(function () {

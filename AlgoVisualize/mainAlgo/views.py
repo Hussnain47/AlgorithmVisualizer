@@ -25,4 +25,7 @@ def stack(request):
     return render(request, 'mainAlgo/Stack.html')
 
 def queue(request):
-    return render(request, 'mainAlgo/Queue.html')        
+    return render(request, 'mainAlgo/Queue.html') 
+
+def bst(request):
+    return render(request, 'mainAlgo/BST.html')            

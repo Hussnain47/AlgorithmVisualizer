@@ -12,4 +12,5 @@ urlpatterns = [
     path('Linked_List/',views.linkedlist,name= 'linked-list'),
     path('Stack/',views.stack,name= 'stack'),
     path('Queue/',views.queue,name= 'queue'),
+    path('BST/',views.bst,name= 'bst'),
 ]

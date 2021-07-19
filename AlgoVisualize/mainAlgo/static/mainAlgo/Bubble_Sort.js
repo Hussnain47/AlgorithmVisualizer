@@ -197,8 +197,10 @@ async function start(A) {
     disable_enablebtn(false);
 }
 
+
+
 $(document).ready(function () {
-    $("#start").click(function () {
+    $("#start").click(function () {    
         start(list);
     });
 });
