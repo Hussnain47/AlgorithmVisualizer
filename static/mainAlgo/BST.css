@@ -1,0 +1,32 @@
+#List-Operations{
+    width: 100%
+}
+
+#input-container{
+    position: absolute;
+    width: 250px;
+    left: 10%;
+    bottom: 5%;
+}
+
+#slidercontainer{
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+}
+
+#index{
+    width: 50px;
+}
+
+#Buttons{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+}
+
+#Output{
+    position: absolute;
+    bottom: 10%;
+    right: 30%;
+}

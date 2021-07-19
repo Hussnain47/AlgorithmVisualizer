@@ -1,0 +1,50 @@
+#rectdiv{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items:center;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+
+#start {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+#input-container {
+    position: absolute;
+    bottom: 1.6%;
+    left: 2%;
+}
+
+
+
+#reset {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+#generate-random {
+    position: absolute;
+    bottom: 8%;
+    left: 20%;
+}
+
+#make-list{
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+}
+
+#slidercontainer{
+    position: absolute;
+    bottom: 8%;
+    left: 35%;
+}
+#slider{
+    width: 200px;
+}
