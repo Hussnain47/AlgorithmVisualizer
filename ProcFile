@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT AlgoVisualize.wsgi:application
+web: waitress-serve --port=*:8000 AlgoVisualize.wsgi:application
