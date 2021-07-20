@@ -1,1 +1,1 @@
-web: gunicorn AlgoVisualize.wsgi.py
+web: gunicorn AlgoVisualiz.wsgi.py
