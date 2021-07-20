@@ -7,28 +7,28 @@
 }
 
 
-#start {
+#main-div{
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    width: 100%;
 }
-
 
 
 
 
 #generate-random {
-    position: absolute;
-    bottom: 8%;
-    left: 20%;
+    margin: 1%;
+    margin-left: 10%;
+    width: 12%;
 }
 
-
+#start {
+    margin: 2%;
+    width: 5%;
+}
 
 #slidercontainer{
-    position: absolute;
-    bottom: 8%;
-    left: 35%;
+    margin: 2%;
 }
 #slider{
     width: 200px;

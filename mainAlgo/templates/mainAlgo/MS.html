@@ -9,15 +9,16 @@
     <div id='rectdiv'>
         <canvas id='Canvas'></canvas>
     </div>
+    <div id='main-div'>
+        <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
 
-    <button id='generate-random' class="btn btn-secondary">Generate Random</button>
+        <div id='slidercontainer' class='d-inline-flex'>
+            <label for='slider'>Speed(<span id='sliderval'>250</span>ms)</label>
+            <input id='slider' type="range" class="form-control-range" min='50' max='500'>
+        </div>
 
-    <div id = 'slidercontainer'>
-        <label for = 'slider'>Time(<span id = 'sliderval'>250</span>ms)</label>
-        <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
+        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
     </div>
-
-    <button id='start' class="btn btn-secondary"> Start</button>
     <script src="{% static 'mainAlgo/MS.js' %}">
     </script>
 </div>

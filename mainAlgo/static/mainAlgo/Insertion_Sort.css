@@ -6,47 +6,43 @@
     top: 40%;
 }
 
-#start {
+#main-div{
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    
+    width: 100%;
 }
 
-#input-container {
-    position: absolute;
-    bottom: 1.6%;
-    left: 2%;
+#start {
+    
+    margin: 2%;
+    width: 5%;
 }
 
 #bigsort{
-    position: absolute;
-    right: 20%;
-    bottom: 5%;
+    margin: 1%
 }
 
-#reset {
-    position: absolute;
-    bottom: 5%;
-    right: 10%;
+#input-container {
+    margin: 2%;
+    width: 20%;
 }
+
 
 #generate-random {
-    position: absolute;
-    bottom: 8%;
-    left: 30%;
+    margin: 1%;
+    width: 13%;
 }
 
 #make-list{
-    position: absolute;
-    bottom: 8%;
+    
     left: 20%;
 }
 
 #slidercontainer{
-    position: absolute;
-    bottom: 8%;
-    left: 45%;
+    margin: 1%;
+    width: 20%;
 }
 #slider{
-    width: 200px;
+    width: 100%;
 }

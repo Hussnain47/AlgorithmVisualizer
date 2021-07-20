@@ -87,7 +87,7 @@ function makeboxes(A) {
         let a = '<div id = "test' + A[i] + '" class = "test">' +
             '<p id = "p' + i + '" style="text-align: center;margin: 9px 0px;">' + A[i] + '</p>'
         '</div>';
-        $('#start').after(a);
+        $('#main-div').before(a);
         let xaxis = 50 * i;
         $("#test" + A[i]).css("left", initpos + "%");
         $("#test" + A[i]).css("left", "+=" + xaxis + "px");

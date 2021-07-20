@@ -3,47 +3,32 @@
     margin: auto;
     justify-content: center;
     align-items:center;
-    border: 3px solid green;
     padding: 10px;
 }
 
 
-#start {
+#main-div{
     position: absolute;
     bottom: 5%;
-    right: 5%;
-}
-
-#input-container {
-    position: absolute;
-    bottom: 1.6%;
-    left: 2%;
+    width: 100%;
 }
 
 
 
-#reset {
-    position: absolute;
-    bottom: 5%;
-    right: 10%;
-}
 
 #generate-random {
-    position: absolute;
-    bottom: 8%;
-    left: 20%;
+    margin: 1%;
+    margin-left: 10%;
+    width: 12%;
 }
 
-#make-list{
-    position: absolute;
-    bottom: 8%;
-    left: 10%;
+#start {
+    margin: 2%;
+    width: 5%;
 }
 
 #slidercontainer{
-    position: absolute;
-    bottom: 8%;
-    left: 35%;
+    margin: 2%;
 }
 #slider{
     width: 200px;

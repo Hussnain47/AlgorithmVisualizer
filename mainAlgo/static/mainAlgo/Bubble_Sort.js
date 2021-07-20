@@ -27,7 +27,7 @@ async function movetoporbottum(y_axis, done, n, speed, color) {
     }
 }
 
-let speed;
+let speed = 250;
 $(document).ready(function(){
     $("[type=range]").change(function(){
       speed=$(this).val();
@@ -35,6 +35,10 @@ $(document).ready(function(){
       $('#sliderval').text(speed);
     });
 });
+
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 //Bubble Sort
 async function bubblesort(A) {
@@ -46,36 +50,16 @@ async function bubblesort(A) {
 
         for (j = 0; j < t; j++) {
             swapped = false;
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                    resolve();
-                }, speed * 3)
-            );
+            await timeout(speed*3)
             movetoporbottum(50, false, A[j], speed, "blue");
             if (A[j] > A[j + 1]) {
-                await new Promise((resolve) =>
-                    setTimeout(() => {
-                        resolve();
-                    }, speed * 3)
-                );
+                await timeout(speed*3)
                 moverightorleft(50, A[j], speed, "blue");
-                await new Promise((resolve) =>
-                    setTimeout(() => {
-                        resolve();
-                    }, speed * 3)
-                );
+                await timeout(speed*3)
                 movetoporbottum(-50, false, A[j + 1], speed, "red");
-                await new Promise((resolve) =>
-                    setTimeout(() => {
-                        resolve();
-                    }, speed * 3)
-                );
+                await timeout(speed*3)
                 moverightorleft(-50, A[j + 1], speed, "red");
-                await new Promise((resolve) =>
-                    setTimeout(() => {
-                        resolve();
-                    }, speed * 3)
-                );
+                await timeout(speed*3)
                 movetoporbottum(50, true, A[j + 1], speed, "red");
                 temp = A[j];
                 A[j] = A[j + 1];
@@ -83,19 +67,11 @@ async function bubblesort(A) {
                 swapped = true;
             }
             if (swapped) {
-                await new Promise((resolve) =>
-                    setTimeout(() => {
-                        resolve();
-                    }, speed * 3)
-                );
+                await timeout(speed*3)
                 movetoporbottum(-50, true, A[j + 1], speed, "blue");
             }
             else{
-                await new Promise((resolve) =>
-                    setTimeout(() => {
-                        resolve();
-                    }, speed * 3)
-                );
+                await timeout(speed*3)
                 movetoporbottum(-50, true, A[j], speed, "blue");
             }
 
@@ -117,7 +93,7 @@ function makeboxes(A) {
         let a = '<div id = "test' + A[i] + '" class = "test">' +
             '<p id = "p' + i + '" style="text-align: center;margin: 9px 0px;">' + A[i] + '</p>'
         '</div>';
-        $('#start').after(a);
+        $('#main-div').before(a);
         let xaxis = 50 * i;
         $("#test" + A[i]).css("left", initpos + "%");
         $("#test" + A[i]).css("left", "+=" + xaxis + "px");

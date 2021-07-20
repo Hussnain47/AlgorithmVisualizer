@@ -19,7 +19,7 @@ for(let i = 0; i < len ; i++){
 function canvelements(){
     canvas = document.getElementById("Canvas");
     canvas.width = 1000;
-    canvas.height = 1000;
+    canvas.height = $(window).height()*0.6;
     canvasw = canvas.width;
     canvash = canvas.height;
     canvele = canvas.getContext("2d");

@@ -49,6 +49,13 @@ function drawbars(start,end,checked){
     }
 }
 
+$(document).ready(function(){
+    $("[type=range]").change(function(){
+      speed=$(this).val();
+      $('#sliderval').text(speed);
+    });
+});
+
 async function insertionsort(start,end){
     let j , key;
     for(let i = start;i <= end; i++){

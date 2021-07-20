@@ -9,26 +9,38 @@
 #Canvas{
     align-items: center;
 }
-#start {
+
+#main-div{
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    width: 100%;
+}
+
+
+#start {
+    margin: 2%;
+    width: 5%;
 }
 
 
 
 #smallsort{
-    position: absolute;
-    right: 20%;
-    bottom: 5%;
+    margin: 2%;
+    width: 12%;
 }
 
 
 
 #generate-random {
-    position: absolute;
-    bottom: 5%;
-    left: 20%;
+    margin: 1%;
+    margin-left: 10%;
+    width: 12%;
 }
 
+#slidercontainer{
+    margin: 2%;
+}
+#slider{
+    width: 200px;
+}
 
