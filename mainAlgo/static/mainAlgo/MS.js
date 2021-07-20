@@ -48,9 +48,11 @@ function drawbars(start,end){
     }
 }
 
+
+
 function merge(start,end){
 
-    let mid = parseInt((start + end) >> 1)
+    let mid = parseInt((start + end)/2)  //shifting right to divide the number
     let start1 = start;
     let start2 = mid + 1;
     let end1 = mid;

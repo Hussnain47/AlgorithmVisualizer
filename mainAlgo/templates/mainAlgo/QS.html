@@ -21,6 +21,35 @@
 
         <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
     </div>
+
+    <div class="about-info container-fluid">
+        <h3 class="text-muted mb-md-0 mb-5 bold-text">Quick Sort </h3>
+        <p style=" color: #627482;font-size: 11pt;  margin-left: 2%;">Quick Sort is recursive sorting algorithm.
+            In which we pick
+            an item as pivot and put the items larger than it on the right and smaller on left.And run on each side
+            again
+            till the list is sorted</p>
+        <h6 class="text-muted mb-md-0 mb-5 bold-text">Psuedo Code :</h6>
+        <p style=" color: #627482; font-size: 11pt">
+            To sort a given Array 'A':<br>
+        <ol style=" color: #627482;font-size: 11pt;">
+            <li>We will pick the last item as pivot and partiion the item by using two pointers where one is start
+                part(i) of the partioning list and the other is the end(j) of it. We will a outer loop
+                that will run from i to j.
+            </li>
+            <li>Then we will run inner loop where we will increase i pointer if till the item is less than the pivot
+                and do the same with j but we will decrease j pointer.
+            </li>
+            <li>Now we have found items that are on the wrong side of the pivot and we will swap them till all
+                the elements less than pivot are on the right of the pivot and all the items greater
+                are on the left.</li>
+            <li>Then we will run the quick sort on the left part of the pivot and on the right part of the pivot. and 
+                it will result to a sorted list.
+            </li>
+        </ol>
+        </p>
+    </div>
+
     <script src="{% static 'mainAlgo/QS.js' %}">
     </script>
 </div>

@@ -20,7 +20,7 @@ def register(request):
     else:
         registerform = RegisterForm()
 
-    return render(request,'loginapp/register.htm',{'registerform':registerform})
+    return render(request,'loginapp/Register.htm',{'registerform':registerform})
 
 @login_required
 def profile(request):

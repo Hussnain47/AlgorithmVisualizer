@@ -31,3 +31,19 @@
     bottom: 10%;
     right: 30%;
 }
+
+.about-info{
+    position:absolute;
+    bottom:-80%;
+}
+#about-us {
+    position:absolute;
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: -120%;
+    height: 250px;
+}

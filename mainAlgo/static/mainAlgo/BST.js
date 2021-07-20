@@ -454,7 +454,7 @@ $('#search').click(async function () {
     if(validateinputval()){
         disable_enablebtn(true);
         await search(tree,validateinputval());
-        await timeout(speed0);
+        await timeout(speed);
         await displayscreen(tree.root);
         disable_enablebtn(false);
     }

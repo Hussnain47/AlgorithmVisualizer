@@ -20,8 +20,24 @@
             <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
         </div>
     
-        <button id='start' class="btn btn-secondary d-inline-flex float-right"> Start</button>
+        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
     </div>
+    <div class="about-info container-fluid">
+        <h3  class="text-muted mb-md-0 mb-5 bold-text" >Bubble Sort </h3>
+        <p style=" color: #627482;font-size: 11pt; margin-left: 2%;">Bubble sort is a basic sorting algorithm that 
+            iterates through a list,
+            comparing nearby entries and swapping them if they are out of order. The list is sent through again and 
+            again until it is sorted.</p>
+        <h6  class="text-muted mb-md-0 mb-5 bold-text">Psuedo Code :</h6>
+        <p  style=" color: #627482; font-size: 11pt">
+            To sort a given Array 'A':<br>
+        <ol style=" color: #627482;font-size: 11pt;">
+            <li>We will iterate through the list from arr[0] to arr[n-1].</li>
+            <li>Then in each iterations we will swap the items if they are out of order </li>
+        </ol>
+        </p>
+    </div>
+    
     <script src="{% static 'mainAlgo/Bubble_Sort.js' %}">
     </script>
 </div>

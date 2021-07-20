@@ -54,7 +54,23 @@
             </div>
         </div>
     </div>
-
+    <div class="about-info container-fluid">
+        <h3  class="text-muted mb-md-0 mb-5 bold-text" >Linked List </h3>
+        <p style=" color: #627482;font-size: 11pt;  margin-left: 2%;">Linked List is an Abstarct data type. Where
+        the current item stores the address of the next item.</p>
+        <h6  class="text-muted mb-md-0 mb-5 bold-text" style="margin-left: 2%;">Psuedo Code :</h6>
+        <p  style=" color: #627482; font-size: 11pt;margin-left: 4%;">
+            Insertion:<br>Looping through the linked list till we find the place to put our item we will give its 
+            previous item the address of given node and store the address of next item.
+        </p>
+        <p  style=" color: #627482; font-size: 11pt;margin-left: 4%;">
+            Search:<br>Looping through the linked list till we find the item.
+        </p>
+        <p  style=" color: #627482; font-size: 11pt;margin-left: 4%;">
+            Deleting:<br>Looping through the linked list till we find the item. and storing the address to the next item.
+            in the previous item.And delete the given item.
+        </p>
+    </div>
     <script src="{% static 'mainAlgo/LinkedList.js'%}"></script>
 </div>
 {% endblock %}

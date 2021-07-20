@@ -49,8 +49,55 @@
             <h4 id='optitle' ></h4>
             <p id = 'outputlist' >-</p>
         </div>
+
+        
     </div>
     
+    <div class="about-info container-fluid">
+        <h3  class="text-muted mb-md-0 mb-5 bold-text" >Binary Search Tree </h3>
+        <p style=" color: #627482;font-size: 11pt;  margin-left: 2%;">BST is an Abstarct Data Type.The items are 
+        stored the form of tree where the items less than the root are on left and greater on right.</p>
+        <h6  class="text-muted mb-md-0 mb-5 bold-text" style="margin-left: 2%;">Psuedo Code :</h6>
+        <p  style=" color: #627482; font-size: 11pt;margin-left: 4%;">
+            Inserting:
+        </p>
+        <ol style=" color: #627482;font-size: 11pt;margin-left: 6%;">
+            <li>We will start from the root.</li>
+            <li>Iterate till the root is null. And move toward left if the item is less than the given item. or
+                right if it is greater. and storing the item. This will be the parent of the node to be inserted
+            </li>
+            <li>Now, If the given item is greater than it will be the right of the parent node else it will be the right.
+            </li>
+        </ol>
+        <p  style=" color: #627482; font-size: 11pt;margin-left: 4%;">
+            Searching:
+        </p>
+        <ol style=" color: #627482;font-size: 11pt;margin-left: 6%;">
+            <li>We will start from the root.</li>
+            <li>Iterate till the root is null. And move toward left if the item is less than the given item. or
+                right if it is greater. and if it is equal to the given item returning true.else returning false.
+            </li>
+        </ol>
+
+        <p  style=" color: #627482; font-size: 11pt;margin-left: 4%;">
+            Deleting:
+        </p>
+        <ol style=" color: #627482;font-size: 11pt;margin-left: 6%;">
+            <li>We will start from the root.</li>
+            <li>Iterate till the root is null. And move toward left if the item is less than the given item. or
+                right if it is greater. till we find the node.
+            </li>
+            <li>If the node doesn't have any children. Then just delete it.
+            </li>
+            <li>If the node doesn't have a children on left then removing the current node and let the right take its place.
+                and vice versa.
+            </li>
+            <li>If the node does have node on left and right then finding the successor of current node and swapping the their
+                places and deleting the given node.
+            </li>
+        </ol>
+    </div>
+
     <script src="{% static 'mainAlgo/BST.js' %}"></script>
 
 </div>
