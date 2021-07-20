@@ -2,6 +2,7 @@
 
 /site
 
+<<<<<<< HEAD:.gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,17 +128,17 @@ venv.bak/
 /site
 
 # mypy
+=======
+>>>>>>> fc41b86c7a73e6601693077bf3d7b097d0e7dc31:.gitignore.txt
 .mypy_cache/
-.dmypy.json
+
 dmypy.json
 
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
+<<<<<<< HEAD:.gitignore
 # Cython debug symbols
 cython_debug/
 
 
+=======
+.pyre/
+>>>>>>> fc41b86c7a73e6601693077bf3d7b097d0e7dc31:.gitignore.txt
