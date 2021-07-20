@@ -1,1 +1,1 @@
-web: gunicorn AlgoVisualize.wsgi --log-file - --log-level debug
+web: gunicorn AlgoVisualize.wsgi:application
