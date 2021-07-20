@@ -1,28 +1,28 @@
 {% extends "mainAlgo/base.htm" %}
 {% block content %}
-{% load static %}
-<link rel="stylesheet" type='text/css' href="{% static 'mainAlgo/Insertion_Sort.css' %}">
+{% load static %} 
+<link rel="stylesheet"  href = "{% static 'mainAlgo/Insertion_Sort.css' %}">
 
 
 <div>
-    <div id='main-div'>
-        <div id="input-container" class="d-inline-block">
-            <div class="form-outline">
-                <input id="inputarr" type="text" class="form-control" placeholder="Enter Array Here:">
-            </div>
-            <small class="text-muted">Enter Numbers Separated by commas.<br>List must not contain repetitions.<br>Max
-                Length is 20.</small>
+    <div id = "input-container">
+        <div class = "form-outline">
+            <input id = "inputarr" type="text" class="form-control" placeholder="Enter Array Here:"> 
         </div>
-        <button id='make-list' class="btn btn-secondary d-inline-flex"> Make List</button>
-        <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
+        <small class = "text-muted">Enter Numbers Separated by commas.<br>List must not contain repetitions.<br>Max Length is 20.</small>
+    </div>
+    <button id='make-list' class = "btn btn-secondary" > Make List</button>
+    <button id='generate-random' class = "btn btn-secondary" >Generate Random</button>
 
-        <div id='slidercontainer' class="d-inline-flex">
-            <label for='slider'>Time(<span id='sliderval'>250</span>ms)</label>
-            <input id='slider' type="range" class="form-control-range" min='50' max='500'>
-        </div>
-        <a id='bigsort' class="btn btn-secondary d-inline-flex" href="{% url 'big-insertion-sort' %}"> Big Insertion
-            Sort</a>
-        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
+    <div id = 'slidercontainer'>
+        <label for = 'slider'>Time(<span id = 'sliderval'>250</span>ms)</label>
+        <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
+    </div>
+    <a id='bigsort' class="btn btn-secondary" href = "{% url 'big-insertion-sort' %}"> Big Insertion Sort</a>
+    <button id='start' class = "btn btn-secondary" > Start</button>
+    <div class= "about-info"> 
+    <h1>Insertion Sort </h1> 
+    <p>Insertion sort iterates through the input list, eating one element each time, and producing a sorted output list. Insertion sort takes one element from the input data at a time, identifies where it belongs in the sorted list, and inserts it there. It keeps on until there are no more input items.</p> 
     </div>
     <script src="{% static 'mainAlgo/Insertion_Sort.js' %}">
     </script>

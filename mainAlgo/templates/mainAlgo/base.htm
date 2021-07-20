@@ -7,18 +7,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <style>
-        body{
-            background-color: lightgray;
-        }
-        
-        .card{
-            
-            min-width: 300px;
-            height: 180px;
-        }
+         body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-info {
+ 
+    text-align: left;
+    padding: 50px;  
+    color: black;
+    
+
+}
+.about-section {
+  padding: 0 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
     </style>
 </head>
 
@@ -40,7 +108,45 @@
         </div>
     </nav>
         {% block content %} {% endblock %}
-    </body>
+    <div class="about-section">
+  <h1>Contact Us</h1>
+  
+  <p>This site has been collaborated by our team. In case of any queries, You may contact any person of our team.</p>
+    <p>WE HOPE TO RESOLVE YOUR PROBLEMS!</p>
+</div>
 
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+           <div class="container">
+        <h2>Shahman Butt</h2>
+        <p class="title">Collaborator</p>
+        <p>Hello! This is Shahman. You can contact me via EMAIL or Facebook given if you have any objections related to Algorithm Visualizer. Thankyou!.</p>
+        <p>shahbutt1424@gmail.com</p>
+        <p>Contact me via phone: 03234947855</p>
+        <a href="https://web.facebook.com/AreUShahman/">Shahman Butt on Facebook</a>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      
+      <div class="container">
+        <h2>Hussnain Ilyas</h2>
+        <p class="title">Collaborator</p>
+        <p>This is Husnain and you may contact me via EMAIL or PHONE. I will be pleased if you get any help from me.</p>
+        <p>hussnainilyas@gmail.com</p>
+        <p>Contact me via phone: 03341045764</p>
+       
+      </div>
+    </div>
+  </div>
+
+    </body>
+    
     
 </html>

@@ -4,23 +4,26 @@
 <link rel="stylesheet" href="{% static 'mainAlgo/Bubble_Sort.css' %}">
 
 <div>
-    <div id = 'main-div'>
-        <div id="input-container" class="d-inline-block">
-            <div class="form-outline">
-                <input id="inputarr" type="text" class="form-control" placeholder="Enter Array Here:">
-            </div>
-            <small class="text-muted">Enter Numbers Separated by commas.<br>List must not contain repetitions.<br>Max
-                Length is 20.</small>
+    <div id="input-container">
+        <div class="form-outline">
+            <input id="inputarr" type="text" class="form-control" placeholder="Enter Array Here:">
         </div>
-        <button id='make-list' class="btn btn-secondary d-inline-flex"> Make List</button>
-        <button id='generate-random' class="btn btn-secondary">Generate Random</button>
-    
-        <div id = 'slidercontainer' class="d-inline-flex">
-            <label for = 'slider'>Speed(<span id = 'sliderval'>250</span>ms)</label>
-            <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
-        </div>
-    
-        <button id='start' class="btn btn-secondary d-inline-flex float-right"> Start</button>
+        <small class="text-muted">Enter Numbers Separated by commas.<br>List must not contain repetitions.<br>Max
+            Length is 20.</small>
+    </div>
+    <button id='make-list' class="btn btn-secondary"> Make List</button>
+    <button id='generate-random' class="btn btn-secondary">Generate Random</button>
+
+    <div id = 'slidercontainer'>
+        <label for = 'slider'>Time(<span id = 'sliderval'>250</span>ms)</label>
+        <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
+    </div>
+
+    <button id='start' class="btn btn-secondary"> Start</button>
+    <button id='reset' class="btn btn-secondary"> Reset</button>
+    <div class= "about-info">
+    <h1>Bubble Sort </h1>
+    <p>Bubble sort, also known as sinking sort, is a basic sorting algorithm that iterates through a list, comparing nearby entries and swapping them if they are out of order. The list is sent through again and again until it is sorted.<br> The comparison sort method is called from the manner that smaller or bigger entries "bubble" to the top of the list.</p>
     </div>
     <script src="{% static 'mainAlgo/Bubble_Sort.js' %}">
     </script>

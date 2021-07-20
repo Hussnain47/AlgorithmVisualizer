@@ -9,19 +9,21 @@
     <div id='rectdiv'>
         <canvas id='Canvas'></canvas>
     </div>
-    <div id='main-div'>
-        <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
 
-        <div id='slidercontainer' class='d-inline-flex'>
-            <label for='slider'>Speed(<span id='sliderval'>250</span>ms)</label>
-            <input id='slider' type="range" class="form-control-range" min='50' max='500'>
-        </div>
+    <button id='generate-random' class="btn btn-secondary">Generate Random</button>
 
-        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
+    <div id = 'slidercontainer'>
+        <label for = 'slider'>Time(<span id = 'sliderval'>250</span>ms)</label>
+        <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
     </div>
+
+    <button id='start' class="btn btn-secondary"> Start</button>
+    <div class= "about-info"> <h1>Merge Sort </h1> 
+    <p>The following is how a merge sort works:<br>
+Separate the unsorted list into n sublists, each with one entry (a list of one element is considered sorted).<br>
+Merge sublists repeatedly to create new sorted sublists until only one sublist remains. The sorted list will be displayed here.</p>
+ </div>
     <script src="{% static 'mainAlgo/MS.js' %}">
     </script>
 </div>
-
-
 {% endblock %}

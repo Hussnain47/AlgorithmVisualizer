@@ -10,17 +10,19 @@
     <div id='rectdiv'>
         <canvas id='Canvas'></canvas>
     </div>
-    <div id='main-div'>
 
-        <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
+    <button id='generate-random' class="btn btn-secondary">Generate Random</button>
 
-        <div id='slidercontainer' class="d-inline-flex">
-            <label for='slider'>Time(<span id='sliderval'>250</span>ms)</label>
-            <input id='slider' type="range" class="form-control-range" min='50' max='500'>
-        </div>
-
-        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
+    <div id='slidercontainer'>
+        <label for='slider'>Time(<span id='sliderval'>250</span>ms)</label>
+        <input id='slider' type="range" class="form-control-range" min='50' max='500'>
     </div>
+
+    <button id='start' class="btn btn-secondary"> Start</button>
+    <button id='reset' class="btn btn-secondary"> Reset</button>
+     <div class= "about-info"> <h1>Quick Sort </h1>
+     <p>Quicksort is based on the divide-and-conquer strategy. It operates by picking a 'pivot' element from the array and splitting the other items into two sub-arrays based on whether they are bigger or less than the pivot. As a result, it's also known as partition-exchange sort. The sub-arrays are then recursively sorted.</p>
+     </div>
     <script src="{% static 'mainAlgo/QS.js' %}">
     </script>
 </div>

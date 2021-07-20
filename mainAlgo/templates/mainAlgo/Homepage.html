@@ -1,7 +1,7 @@
 {% extends "mainAlgo/base.htm" %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type='text/css' href = "{% static 'mainAlgo/Homepage.css' %}">
+<link rel="stylesheet" href = "{% static 'mainAlgo/Homepage.css' %}">
 
 <div class="container-fluid align-top" style="margin-top: 100px;" id="Main-Page">
 
@@ -54,18 +54,6 @@
         <div class="card-footer text-center">
             
             <a class="card-link btn btn-dark" href = "{% url 'queue' %}" >Go</a>
-            
-        </div>
-    </div>
-    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style = "min-width: 300px;">
-        
-        <div class="card-body">
-            <h4 class="card-title">Binary Search Tree</h4>
-            <p class="card-text">Insert,Search,Delete,Traversal</p>
-        </div>
-        <div class="card-footer text-center">
-            
-            <a class="card-link btn btn-dark" href = "{% url 'bst' %}" >Go</a>
             
         </div>
     </div>

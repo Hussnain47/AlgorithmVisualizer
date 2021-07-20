@@ -6,21 +6,16 @@
 <title>Insertion Sort</title>
 
 <div>
+
     <div id='rectdiv'>
         <canvas id='Canvas'></canvas>
     </div>
-    <div id='main-div'>
-    
-        <button id='generate-random' class="btn btn-secondary d-inline-block">Generate Random</button>
-        
-        <div id='slidercontainer' class='d-inline-flex'>
-            <label for='slider'>Speed(<span id='sliderval'>250</span>ms)</label>
-            <input id='slider' type="range" class="form-control-range" min='50' max='500'>
-        </div>
 
-        <a id='smallsort' class="btn btn-secondary d-inline-block" href="{% url 'insertion-sort' %}"> Small Insertion Sort</a>
-        <button id='start' class="btn btn-success d-inline-block float-right"> Start</button>
-    </div>
+    <button id='generate-random' class="btn btn-secondary">Generate Random</button>
+
+    <a id='smallsort' class="btn btn-secondary" href = "{% url 'insertion-sort' %}"> Small Insertion Sort</a>
+    <button id='start' class="btn btn-secondary"> Start</button>
+
     <script src="{% static 'mainAlgo/BigIS.js' %}">
     </script>
 </div>
