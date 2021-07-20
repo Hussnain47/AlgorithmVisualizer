@@ -1,7 +1,7 @@
 asgiref
 Django
-django-crispy-forms=
-gunicorn=
+django-crispy-forms
+gunicorn
 Pillow
 pytz
 sqlparse
