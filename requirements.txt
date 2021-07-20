@@ -6,3 +6,4 @@ Pillow
 pytz
 sqlparse
 typing-extensions
+whitenoise
