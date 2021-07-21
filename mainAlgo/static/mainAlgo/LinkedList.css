@@ -10,6 +10,41 @@
     left:10%;
 }
 
+#sort-info{
+    position: absolute;
+    top:20%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+li {
+    padding-left: 3em; 
+    text-indent: -.7em;
+  }
+
+#unvisited::before {
+    content: "■"; font-family:"Arial Black";
+    color: #0085eb; 
+    
+}
+
+#current::before {
+    content: "■"; font-family:"Arial Black";
+    color: red; 
+}
+#checked::before {
+    content: "■"; font-family:"Arial Black";
+    color: #14eb00; 
+}
+
+
 #index{
     width: 50px;
 }

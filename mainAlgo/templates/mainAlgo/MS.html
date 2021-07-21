@@ -9,6 +9,13 @@
     <div id='rectdiv'>
         <canvas id='Canvas'></canvas>
     </div>
+    <div id='sort-info'>
+        <ul>
+            <li id='unvisited'>Unvisited</li>
+            <li id='current'>Sorting</li>
+            <li id='checked'>Sorted</li>
+        </ul>
+    </div>
     <div id='main-div'>
         <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
 
@@ -21,17 +28,19 @@
     </div>
 
     <div class="about-info container-fluid">
-        <h3  class="text-muted mb-md-0 mb-5 bold-text" >Merge Sort </h3>
+        <h3 class="text-muted mb-md-0 mb-5 bold-text">Merge Sort </h3>
         <p style=" color: #627482;font-size: 11pt;  margin-left: 2%;">Merge Sort is recursive sorting algorithm.
-        which divides the given array into two recursively and sorts them when merging each part.Till the whole list is 
-        sorted</p>
-        <h6  class="text-muted mb-md-0 mb-5 bold-text">Psuedo Code :</h6>
-        <p  style=" color: #627482; font-size: 11pt">
+            which divides the given array into two recursively and sorts them when merging each part.Till the whole list
+            is
+            sorted</p>
+        <h6 class="text-muted mb-md-0 mb-5 bold-text">Psuedo Code :</h6>
+        <p style=" color: #627482; font-size: 11pt">
             To sort a given Array 'A':<br>
         <ol style=" color: #627482;font-size: 11pt;">
             <li>We will divide the array into two parts And calling Mergesort function on each half
                 .If the size of the list is one then returning it</li>
-            <li>Then merging it. To merge we will check each items of the list and put them in the list accordingly.</li>
+            <li>Then merging it. To merge we will check each items of the list and put them in the list accordingly.
+            </li>
             <li>Return the merged list till the list is sorted.</li>
         </ol>
         </p>
