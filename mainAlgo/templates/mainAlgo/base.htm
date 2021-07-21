@@ -82,6 +82,12 @@
 
             color: white;
         }
+
+        #about:hover{
+            cursor: pointer;
+            color:#b9c3c7;
+
+        }
     </style>
     
 </head>
@@ -93,7 +99,7 @@
         <a class="navbar-brand" href="{% url 'algo-home' %}">Algo Visualizer</a>
         <div class="navbar-nav mr-auto">
             <li class="nav-item"> <a class="nav-link" href="{% url 'algo-home' %}">Home</a> </li>
-            <li class="nav-item"> <a id='about' href="" class="nav-link"><span id='pagedwn'>About</span></a> </li>
+            <li class="nav-item"> <a id='about' class="nav-link"><span id='pagedwn'>About</span></a> </li>
         </div>
         <div class="navbar-nav ml-auto">
             {% if user.is_authenticated %}
