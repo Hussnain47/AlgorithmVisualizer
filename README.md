@@ -26,6 +26,7 @@ To run the project you need to have following requirements
     8. typing-extensions
     9. whitenoise 
     You can install them by using:
+    
     ```pip install -r requirements.txt```
 * And you must have latest browser with scripts allowed.   
 
