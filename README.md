@@ -48,7 +48,7 @@ Just do most of the above task but for hosting. You have to add the domain in th
 
 ### Sorting Algorithm(with bars):
 
-![Sorting(big)](Sortingbig.JPG)
+![Sorting(big)](Sorting(big).JPG)
 
 1. Generate a Random array.
 2. This will start the sorting.
