@@ -37,7 +37,7 @@ Just do most of the above task but for hosting. You have to add the domain in th
 
 ### Sorting Algorithm(with boxes):
 
-![Sorting(small)](sorting.jpg)
+![Sorting(small)](Sorting.jpg)
 
 1. Enter the Array here seperated by the commas and follow the instructions given below.
 2. Press this so it would show on the screen
