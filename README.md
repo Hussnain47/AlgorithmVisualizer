@@ -37,7 +37,7 @@ Just do most of the above task but for hosting. You have to add the domain in th
 
 ### Sorting Algorithm(with boxes):
 
-![Sorting(small)](Sorting.jpg)
+![Sorting(small)](Sorting.JPG)
 
 1. Enter the Array here seperated by the commas and follow the instructions given below.
 2. Press this so it would show on the screen
@@ -45,3 +45,35 @@ Just do most of the above task but for hosting. You have to add the domain in th
 4. This is where your array will be shown.
 5. This will start the sorting process.
 6. This is how you can control the speed.
+
+### Sorting Algorithm(with bars):
+
+![Sorting(big)](Sortingbig.JPG)
+
+1. Generate a Random array.
+2. This will start the sorting.
+3. You can control the speed with this.
+
+### LinkedList(Stacks and Queues):
+
+![Linked-List](Linkedlist.JPG)
+
+1. Enter Value here. Please follow the instructions.
+2. Enter the index here.
+3. Insert and Delete has three options.
+    * at Head
+    * at Index
+    * at End.
+
+
+### Binary Search Tree:
+
+![BST](BST.JPG)
+
+1. Enter Value here.
+2. Control Speed from here.
+3. Insert,Delete and Search value using these buttons.Traversing has 3 options.
+
+    * Pre Order Traverasal
+    * In Order Traversal
+    * Post Order Traversal
