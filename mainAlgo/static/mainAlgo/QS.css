@@ -38,10 +38,21 @@ li {
     
 }
 
-#current::before {
+#pivot::before {
     content: "■"; font-family:"Arial Black";
-    color: red; 
+    color: #eeff00; 
 }
+
+#left::before {
+    content: "■"; font-family:"Arial Black";
+    color: purple; 
+}
+
+#right::before {
+    content: "■"; font-family:"Arial Black";
+    color: orange; 
+}
+
 #checked::before {
     content: "■"; font-family:"Arial Black";
     color: #14eb00; 

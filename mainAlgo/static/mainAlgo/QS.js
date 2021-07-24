@@ -1,75 +1,84 @@
 
-let canvas,canvasw,canvash,canvele;
+let canvas, canvasw, canvash, canvele;
 let rectgap = 10;
 canvelements();
 
-let Arr = [], temp = [] , visited = [] ;
+let Arr = [], temp = [], visited = [];
 
 let len = 100;
 
-for(let i = 0; i < len ; i++){
-    Arr.push(Math.round(Math.random()*300));
+for (let i = 0; i < len; i++) {
+    Arr.push(Math.round(Math.random() * 300));
 }
 
-for(let i = 0; i < len ; i++){
+for (let i = 0; i < len; i++) {
     temp.push(0);
     visited.push(0);
 }
 
-function canvelements(){
+function canvelements() {
     canvas = document.getElementById("Canvas");
     canvas.width = 1000;
-    canvas.height = $(window).height()*0.6;
+    canvas.height = $(window).height() * 0.6;
     canvasw = canvas.width;
     canvash = canvas.height;
     canvele = canvas.getContext("2d");
 
 }
-function drawbars(start,pivot,end){
-    console.log(Arr);
-    canvele.clearRect(0,0,1000,1000);
+async function drawbars(start, pivot, end, sorted) {
+    canvele.clearRect(0, 0, 1000, 1000);
 
-    for(let i = 0; i < len ; i++){
+    for (let i = 0; i < len; i++) {
 
         canvele.fillStyle = '#0085eb';
 
-        canvele.fillRect(rectgap*i,400-Arr[i],rectgap-2,Arr[i]);
+        canvele.fillRect(rectgap * i, 400 - Arr[i], rectgap - 2, Arr[i]);
 
-        if(visited[i]){
-            canvele.fillStyle = '#14eb00';
-            canvele.fillRect(rectgap*i,400-Arr[i],rectgap-2,Arr[i]);
-        }
+
     }
 
-    
+    if (sorted) {
+        for (let i = len-1; i >= 0; i--) {
 
-    for(i = start; i <= end; i++){
-        if(i==pivot){
-            canvele.fillStyle = '#eeff00';
-            canvele.fillRect(rectgap*i,400-Arr[i],rectgap-3,Arr[i]);
-            visited[i] = 1;
-        }
-        else{
-            canvele.fillStyle = 'red';
-            canvele.fillRect(rectgap*i,400-Arr[i],rectgap-3,Arr[i]);
-            visited[i] = 1;
+            canvele.fillStyle = '#14eb00';
+            canvele.fillRect(rectgap * i, 400 - Arr[i], rectgap - 2, Arr[i]);
+            await timeout(10);
+        } 
+    }
+    else {
+
+        for (i = start; i <= end; i++) {
+            if (i == pivot) {
+                canvele.fillStyle = '#eeff00';
+                canvele.fillRect(rectgap * i, 400 - Arr[i], rectgap - 3, Arr[i]);
+
+            }
+            else if (i < pivot) {
+                canvele.fillStyle = 'purple';
+                canvele.fillRect(rectgap * i, 400 - Arr[i], rectgap - 3, Arr[i]);
+
+            }
+            else {
+                canvele.fillStyle = 'orange';
+                canvele.fillRect(rectgap * i, 400 - Arr[i], rectgap - 3, Arr[i]);
+            }
         }
     }
 }
 
-async function partition(start,end){
-    let pivot = Arr[Math.floor((start+end)/2)];
+async function partition(start, end) {
+    let pivot = Arr[Math.floor((start + end) / 2)];
     let i = start;
     let j = end;
 
-    while(i <= j){
-        while(Arr[i] < pivot){
+    while (i <= j) {
+        while (Arr[i] < pivot) {
             i++;
         }
-        while(Arr[j] > pivot){
+        while (Arr[j] > pivot) {
             j--;
         }
-        if(i <= j){
+        if (i <= j) {
             var temp = Arr[i];
             Arr[i] = Arr[j];
             Arr[j] = temp;
@@ -78,7 +87,7 @@ async function partition(start,end){
         }
     }
     return i;
-    
+
 }
 
 function timeout(ms) {
@@ -86,48 +95,48 @@ function timeout(ms) {
 }
 
 let speed = 250;
-async function quickSort(start,end){
+async function quickSort(start, end) {
     let pivot;
-    if (Arr.length > 1){
-        pivot = await partition(start,end);
-        await drawbars(start,pivot,end);
+    if (Arr.length > 1) {
+        pivot = await partition(start, end);
+        await drawbars(start, pivot, end,false);
 
         await timeout(speed);
-        if(start < pivot -1){
-            await quickSort(start,pivot - 1)
+        if (start < pivot - 1) {
+            await quickSort(start, pivot - 1)
         }
-        if(pivot < end){
-            await quickSort(pivot,end);
+        if (pivot < end) {
+            await quickSort(pivot, end);
         }
         
     }
 }
 
 
-$(document).ready(function(){
-    $("[type=range]").change(function(){
-      speed=$(this).val();
-      console.log(speed);
-      $('#sliderval').text(speed);
+$(document).ready(function () {
+    $("[type=range]").change(function () {
+        speed = $(this).val();
+        console.log(speed);
+        $('#sliderval').text(speed);
     });
 });
 
-$('#generate-random').click(function() {
+$('#generate-random').click(function () {
     location.reload();
 });
 
-async function start(){
+async function start() {
     disable_enablebtn(true);
-    await quickSort(0, len-1);
-    await drawbars();
+    await quickSort(0, len - 1);
+    drawbars(0,0,len-1,true)
     disable_enablebtn(false);
 }
 
 drawbars();
 
-function disable_enablebtn(x){
-    $("#start").attr("disabled",x);
-    $("#generate-random").attr("disabled",x);
+function disable_enablebtn(x) {
+    $("#start").attr("disabled", x);
+    $("#generate-random").attr("disabled", x);
 }
 
 $(document).ready(function () {
