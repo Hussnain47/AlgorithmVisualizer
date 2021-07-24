@@ -90,15 +90,16 @@ async function quickSort(start,end){
     let pivot;
     if (Arr.length > 1){
         pivot = await partition(start,end);
+        await drawbars(start,pivot,end);
+
+        await timeout(speed);
         if(start < pivot -1){
             await quickSort(start,pivot - 1)
         }
         if(pivot < end){
             await quickSort(pivot,end);
         }
-        await drawbars(start,pivot,end);
-
-        await timeout(speed);
+        
     }
 }
 
