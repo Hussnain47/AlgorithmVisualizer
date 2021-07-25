@@ -5,28 +5,28 @@
 <link rel="stylesheet" href="{% static 'mainAlgo/MS.css' %}">
 <title>Merge Sort</title>
 <div>
-
-    <div id='rectdiv'>
-        <canvas id='Canvas'></canvas>
-    </div>
-    <div id='sort-info'>
-        <ul>
-            <li id='unvisited'>Unvisited</li>
-            <li id='current'>Sorting</li>
-            <li id='checked'>Sorted</li>
-        </ul>
-    </div>
-    <div id='main-div'>
-        <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
-
-        <div id='slidercontainer' class='d-inline-flex'>
-            <label for='slider'>Speed(<span id='sliderval'>250</span>ms)</label>
-            <input id='slider' type="range" class="form-control-range" min='50' max='500'>
+    <div id='display-div'>
+        <div id='rectdiv'>
+            <canvas id='Canvas'></canvas>
         </div>
+        <div id='sort-info'>
+            <ul>
+                <li id='unvisited'>Unvisited</li>
+                <li id='current'>Sorting</li>
+                <li id='checked'>Sorted</li>
+            </ul>
+        </div>
+        <div id='main-div'>
+            <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
 
-        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
+            <div id='slidercontainer' class='d-inline-flex'>
+                <label for='slider'>Speed(<span id='sliderval'>250</span>ms)</label>
+                <input id='slider' type="range" class="form-control-range" min='50' max='500'>
+            </div>
+
+            <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
+        </div>
     </div>
-
     <div class="about-info container-fluid">
         <h3 class="text-muted mb-md-0 mb-5 bold-text">Merge Sort </h3>
         <p style=" color: #627482;font-size: 11pt;  margin-left: 2%;">Merge Sort is recursive sorting algorithm.
