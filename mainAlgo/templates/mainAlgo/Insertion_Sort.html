@@ -20,27 +20,27 @@
             <small class="text-muted">Enter Numbers Separated by commas.<br>List must not contain repetitions.<br>Max
                 Length is 20.</small>
         </div>
-        <button id='make-list' class="btn btn-secondary d-inline-flex"> Make List</button>
-        <button id='generate-random' class="btn btn-secondary d-inline-flex">Generate Random</button>
+        <button id='make-list' class="btn  d-inline-flex"> Make List</button>
+        <button id='generate-random' class="btn  d-inline-flex">Generate Random</button>
 
         <div id='slidercontainer' class="d-inline-flex">
             <label for='slider'>Speed(<span id='sliderval'>250</span>ms)</label>
             <input id='slider' type="range" class="form-control-range" min='50' max='500'>
         </div>
-        <a id='bigsort' class="btn btn-secondary d-inline-flex" href="{% url 'big-insertion-sort' %}"> Big Insertion
-            Sort</a>
-        <button id='start' class="btn btn-success d-inline-flex float-right"> Start</button>
+        <button id='bigsort' class="btn d-inline-flex" href="{% url 'big-insertion-sort' %}"> Big Insertion
+            Sort</button>
+        <button id='start' class="btn d-inline-flex float-right"> Start</button>
     </div>
     <div class="about-info container-fluid">
         <h3  class="text-muted mb-md-0 mb-5 bold-text" >Insertion Sort </h3>
-        <p style=" color: #627482;font-size: 11pt;  margin-left: 2%;">Insertion sort iterates through the input list, checking one element each time,
+        <p style=" font-size: 11pt;  margin-left: 2%;">Insertion sort iterates through the input list, checking one element each time,
             and producing a sorted output list. Insertion sort takes one element from the input array at a time,
             identifies where it belongs in the sorted list, and inserts it there.
             It keeps on until there are no more input items.</p>
         <h6  class="text-muted mb-md-0 mb-5 bold-text">Psuedo Code :</h6>
-        <p  style=" color: #627482; font-size: 11pt">
+        <p  style="  font-size: 11pt">
             To sort a given Array 'A':<br>
-        <ol style=" color: #627482;font-size: 11pt;">
+        <ol style=" font-size: 11pt;">
             <li>We will iterate through the list from arr[0] to arr[n-1].</li>
             <li>Then in each iterations we will save the current item.</li>
             <li>We will compare this item to all its predecessor. And if the predecessor is greater then

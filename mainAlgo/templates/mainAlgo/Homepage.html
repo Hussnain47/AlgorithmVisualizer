@@ -3,77 +3,90 @@
 {% load static %}
 
 <style>
-    #main-container {
-        min-height: calc(100vh-96px-350px);
-        margin-top: 50px;
-        margin-bottom: 100px;
-        
+    .card{
+        background-color: #343a40;
+    }
+    .main-body{
+        margin-bottom: 10%;
     }
 </style>
-<div id="main-container" class="container-fluid align-top"" id="Main-Page">
+<div class="container-fluid align-top main-body" style="margin-top: 100px;" id="Main-Page">
 
-    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style="max-width: 300px;">
-
+    <div class="card text-white mb-3 d-inline-block align-top" style = "max-width: 300px;">
+        
         <div class="card-body">
             <h4 class="card-title">Sorting</h4>
-
+            
         </div>
         <div class="card-footer">
-            <a class="card-link  btn btn-dark" href="{% url 'bubble-sort' %}">Bubble Sort</a>
-            <a class="card-link  btn btn-dark" href="{% url 'insertion-sort' %}">Insertion Sort</a>
-            <a class="card-link  btn btn-dark ml-auto" href="{% url 'merge-sort' %}">Merge Sort</a>
-            <a class="card-link  btn btn-dark ml-md-4" href="{% url 'quick-sort' %}">Quick Sort</a>
+            <a class="card-link  btn" href = "{% url 'bubble-sort' %}" >Bubble Sort</a>
+            <a class="card-link  btn" href = "{% url 'insertion-sort' %}" >Insertion Sort</a>
+            <a class="card-link  btn ml-auto" href = "{% url 'merge-sort' %}" >Merge Sort</a>
+            <a class="card-link  btn ml-md-4" href = "{% url 'quick-sort' %}" >Quick Sort</a>
         </div>
     </div>
 
-    <div class="card text-white bg-dark mb-3 d-inline-block align-top">
-
+    <div class="card text-white  mb-3 d-inline-block align-top" >
+        
         <div class="card-body">
             <h4 class="card-title">Linked List</h4>
-            <p class="card-text">Enter Remove Search</p>
+            <p class="card-text">Enter | Remove | Search</p>
         </div>
         <div class="card-footer text-center">
-
-            <a class="card-link btn btn-dark" href="{% url 'linked-list' %}">Go</a>
-
+            
+            <a class="card-link btn " href = "{% url 'linked-list' %}" >Go</a>
+            
         </div>
     </div>
 
-    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style="min-width: 300px;">
-
+    <div class="card text-white mb-3 d-inline-block align-top" style = "min-width: 300px;">
+        
         <div class="card-body">
             <h4 class="card-title">Stack</h4>
-            <p class="card-text">Push Pop</p>
+            <p class="card-text">Push | Pop</p>
         </div>
         <div class="card-footer text-center">
-
-            <a class="card-link btn btn-dark" href="{% url 'stack' %}">Go</a>
-
+            
+            <a class="card-link btn" href = "{% url 'stack' %}" >Go</a>
+            
         </div>
     </div>
 
-    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style="min-width: 300px;">
-
+    <div class="card text-white  mb-3 d-inline-block align-top" style = "min-width: 300px;">
+        
         <div class="card-body">
             <h4 class="card-title">Queue</h4>
-            <p class="card-text">EnQueue Dequeue</p>
+            <p class="card-text">EnQueue | Dequeue</p>
         </div>
         <div class="card-footer text-center">
-
-            <a class="card-link btn btn-dark" href="{% url 'queue' %}">Go</a>
-
+            
+            <a class="card-link btn" href = "{% url 'queue' %}" >Go</a>
+            
         </div>
     </div>
-    <div class="card text-white bg-dark mb-3 d-inline-block align-top" style="min-width: 300px;">
-
+    <div class="card text-white mb-3 d-inline-block align-top" style = "min-width: 300px;">
+        
         <div class="card-body">
             <h4 class="card-title">Binary Search Tree</h4>
-            <p class="card-text">Insert Search Delete Traversal</p>
+            <p class="card-text">Insert | Search | Delete | Traversal</p>
         </div>
         <div class="card-footer text-center">
+            
+            <a class="card-link btn" href = "{% url 'bst' %}" >Go</a>
+            
+        </div>
+    </div>
 
-            <a class="card-link btn btn-dark" href="{% url 'bst' %}">Go</a>
-
+    <div class="card text-white mb-3 d-inline-block align-top" style = "min-width: 300px;">
+        
+        <div class="card-body">
+            <h4 class="card-title">Graph</h4>
+            <p class="card-text">BFS | DFS | Dijkstra</p>
+        </div>
+        <div class="card-footer text-center">
+            
+            <a class="card-link btn" href = "{% url 'graph' %}" >Go</a>
+            
         </div>
     </div>
 

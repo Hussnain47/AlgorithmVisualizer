@@ -28,4 +28,7 @@ def queue(request):
     return render(request, 'mainAlgo/Queue.html') 
 
 def bst(request):
-    return render(request, 'mainAlgo/BST.html')            
+    return render(request, 'mainAlgo/BST.html')   
+
+def graph(request):
+    return render(request, 'mainAlgo/Graphs.html')             

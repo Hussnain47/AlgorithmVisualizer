@@ -33,28 +33,28 @@ li {
   }
 
 #unvisited::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #0085eb; 
     
 }
 
 #pivot::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #eeff00; 
 }
 
 #left::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: purple; 
 }
 
 #right::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: orange; 
 }
 
 #checked::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #14eb00; 
 }
 

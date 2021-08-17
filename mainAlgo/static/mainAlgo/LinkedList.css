@@ -1,5 +1,3 @@
-
-
 #List-Operations{
     width: 100%
 }
@@ -30,17 +28,17 @@ li {
   }
 
 #unvisited::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #0085eb; 
     
 }
 
 #current::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: red; 
 }
 #checked::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #14eb00; 
 }
 

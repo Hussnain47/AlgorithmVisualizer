@@ -22,7 +22,7 @@ async function movetoporbottum(y_axis, done, n, speed, color) {
         $(document).ready(function () {
 
             $("#test" + n).css("background-color", "transparent")
-            $("#test" + n).css("border-color", "red")
+            $("#test" + n).css("border-color", "black")
         });
     }
 }

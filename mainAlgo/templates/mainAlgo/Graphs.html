@@ -1,0 +1,53 @@
+{% extends "mainAlgo/base.htm" %}
+{% block content %}
+{% load static %} 
+<link rel="stylesheet"  href = "{% static 'mainAlgo/Graphs.css' %}">
+
+<div>
+    <div id = "Svg-Box">
+        <svg id='svg' width='100%' height='600px'>
+            <defs id='mardef'>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" />
+                </marker>
+            </defs>
+        </svg>
+    </div>
+
+    
+    <div id='Graph-Operations'>
+        <div id="input-container">
+            <div class="input-group">
+                <input id="sourcevertice" type="text" class="form-control" placeholder="Source:">
+                <span class="input-group-addon">--</span>
+                <input id="destvertice" type="text" class="form-control" placeholder="Destination:">
+                <span class="input-group-addon">--</span>
+                <input id="weight" type="text" class="form-control" placeholder="Weight:">
+            </div>
+
+            <small class="text-muted">Enter Vertice that exist. And keep the weight smaller than 100.</small>
+        </div>
+        <div id = 'slidercontainer'>
+            <label for = 'slider'>Speed(<span id = 'sliderval'>250</span>ms)</label>
+            <input id = 'slider'  type="range" class="form-control-range" min='50' max = '500'>
+        </div>
+        <div id='Buttons'>
+            <label class='addvertice'>Add Vertice</label>
+            <label class="switch">
+                <input id='toggle' type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <button id='addedge' class='btn btn-secondary text-white flex-item'>Add Edge</button>
+            <button id='delete' class='btn btn-secondary text-white flex-item'>Delete</button>
+            <button id='BFS' class='btn btn-secondary text-white flex-item'>BFS</button>
+            <button id='DFS' class='btn btn-secondary text-white flex-item'>DFS</button>
+            <button id='Dijkstra' class='btn btn-secondary text-white flex-item'>Dijkstra</button>
+            
+
+        </div>
+        
+    </div>
+    
+    <script src="{% static 'mainAlgo/Graphs.js' %}"></script>
+</div>
+{% endblock %}

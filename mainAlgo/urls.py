@@ -13,4 +13,5 @@ urlpatterns = [
     path('Stack/',views.stack,name= 'stack'),
     path('Queue/',views.queue,name= 'queue'),
     path('BST/',views.bst,name= 'bst'),
+    path('Graph/',views.graph,name= 'graph'),
 ]

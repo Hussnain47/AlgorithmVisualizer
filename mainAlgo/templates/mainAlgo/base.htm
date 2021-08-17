@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
     <title>AlgoVisualize</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,9 +22,8 @@
         }
 
         body {
-            background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
             font-family: 'Rubik', sans-serif;
-            background: lightgray;
+            background: white;
             height: 100 !important
         }
 
@@ -78,17 +77,34 @@
             color: white;
         }
 
-        #about:hover{
+        #about:hover {
             cursor: pointer;
-            color:#b9c3c7;
+            color: #b9c3c7;
 
         }
+
+        .navbar {
+            background-color: #343a40;
+
+        }
+
+        a {
+            color: white;
+        }
+
+        #about{
+            color: white;
+        }
+
+        a:hover {
+            color: gray;
+        }
     </style>
-    
+
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar  navbar-expand-lg">
 
 
         <a class="navbar-brand" href="{% url 'algo-home' %}">Algo Visualizer</a>
@@ -120,7 +136,8 @@
                         </div>
 
                         <div class="col-xl-8 align-self-center" style="font-size: 13px;">
-                            <br>We are Students of Computer Engineering at University of Engineering and Technology.
+                            <br>We are Students of Computer Engineering at University of Engineering and
+                            Technology.
                             <br>This Website was dedicated to help other Students visualize
                             and understand Data Structures and Algorithm.
                             <br>Because this was our first Website.If you find any faults and bugs feel free to
@@ -155,19 +172,14 @@
                                         aria-hidden="true"></i></span>hussnainilyas2344@gmail.com<br>
                             </small>
                         </div>
-                        <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
-                            <h6 class="text-muted bold-text"><b>Shahman Butt</b></h6><small><span><i
-                                        class="fa fa-envelope" aria-hidden="true"></i></span>
-                                shahbutt1424@gmail.com</small>
-                        </div>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-    
+
     <script src="{% static 'mainAlgo/base.js' %}"></script>
-    
+
 
 </body>
 

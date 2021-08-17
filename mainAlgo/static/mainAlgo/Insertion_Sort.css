@@ -1,5 +1,5 @@
 .test {
-    border: 3px solid red;
+    border: 3px solid #6c757d;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -48,17 +48,17 @@ li {
   }
 
 #unvisited::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #0085eb; 
     
 }
 
 #current::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: red; 
 }
 #checked::before {
-    content: "■"; font-family:"Arial Black";
+    content: "◉"; font-family:"Arial Black";
     color: #14eb00; 
 }
 
@@ -81,6 +81,15 @@ li {
     width: 100%;
 }
 
+.btn{
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn:hover{
+    background-color: gray;
+}
+
 .about-info{
     position:absolute;
     bottom:-40%;
@@ -89,7 +98,7 @@ li {
     position:absolute;
     overflow: hidden;
     margin-top: 250px;
-    background: #262626;
+    background-color: #262626;
     color: #627482 !important;
     margin-bottom: 0;
     padding-bottom: 0;
