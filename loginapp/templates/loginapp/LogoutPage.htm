@@ -1,5 +1,11 @@
-{% extends "loginapp/base.htm" %}
+{% extends "mainAlgo/base.htm" %}
 {% block content %}
+<style>
+    .container{
+        margin-top: 10%;
+        margin-bottom: 30%;
+    }
+</style>
     <div class='container'>
         <h3>You have been Logged Out</h3>
         <a href="{% url 'login' %}">Log In</a>
