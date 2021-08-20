@@ -377,11 +377,14 @@ async function DFS_helper(graph, u) {
 
 
 async function Dijkstra(graph, uid) {
+
+    
+
     for (let ver of graph.vertices) {
         ver.dis = Infinity;
         ver.color = 'white';
-        document.getElementById("circle" + u.id).setAttribute('fill', 'white');
-    document.getElementById("circle" + u.id).setAttribute('stroke', 'black');
+        document.getElementById("circle" + ver.id).setAttribute('fill', 'white');
+        document.getElementById("circle" + ver.id).setAttribute('stroke', 'black');
         ver.par = null;
     }
     let u = graph.findVertice(uid);
